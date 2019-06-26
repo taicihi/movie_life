@@ -1,0 +1,88 @@
+<html>
+    
+　 <head>
+　     <script src="jquery.min.js" type="text/javascript"></script>
+　     <link href='homes.css' rel='stylesheet'>
+　 </head>
+
+  <body>
+    
+    <header>
+        <nav>
+            <ul class="clearfix">
+              <li>ホーム</li>
+              <li><%= link_to '作品一覧', homes_film_path %></li>
+              <li><%= link_to '映画館', homes_theater_path %></li>
+              <li><%= link_to 'ログアウト',logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } %></li>
+              <li><%= link_to 'お問い合わせ', homes_ask_path %></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <main class="clearfix">
+         <div id="main_image">
+           <%= image_tag 'movie.jpeg', :size =>'940x350'%>
+         </div>
+    
+         <div id="main_content">
+          <section id="info">
+            <h2>お知らせ</h2>
+              <dl>
+                <dt>2019年6月10日</dt>
+                <dd>リニューアルオープンしました。</dd>
+                <dt>2019年6月15日</dt>
+                <dd>6/27（金）は設備メンテナンスのため休業いたします。</dd>
+                <dt>2019年6月20日</dt>
+                <dd>お盆休みも休まず営業いたします</dd>
+              </dl>
+          </section>
+    
+          <section id="campaign">
+           <h2>キャンペーン情報</h2>
+            <ul>
+              <li>日頃の感謝を込めて、全館がいつもよりお得に！</li>
+              <li>平日11時から14時までお得な割引タイムを実施中。</li>
+              <li>とってもオトクな早期予約受付中。</li>
+            </ul>
+          </section>
+        </div>
+    
+        <!-- side_bar -->
+        <aside id="side_bar">
+          <ul>
+    
+            <li>
+              <a href="#">
+                <img src="http://placehold.jp/300x200.png" alt="バナー1">
+              </a>
+            </li>
+    
+            <li>
+              <a href="#">
+                <img src="http://placehold.jp/300x200.png" alt="バナー2">
+              </a>
+            </li>
+    
+          </ul>
+        </aside>
+    </main>
+    <!-- main_end -->
+
+
+    <!-- footer_begin -->
+    <footer>
+      <ul>
+        <li><a href="movie.html">ホーム</a></li>
+        <li><a href ="#">作品情報</a></li>
+        <li><a href ="#">店舗紹介</a></li>
+        <li><a href ="#">ログイン</a></li>
+        <li><a href="#">動画投稿</a></li>
+        <li><a href ="#">お問い合わせ</a></li>
+      </ul>
+    
+    <small>&copy; 2018 CSS Cafe</small>
+    </footer>
+    
+    
+  </body>
+</html>

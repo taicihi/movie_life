@@ -19,12 +19,17 @@ h1, h2 {
   padding: 8px 16px;
   border-radius: 4px;
   transition: .4s;
+  margin-top: 30px
 }
 
 .btn:hover {
   background-color: #9ec34b;
   border-color: #cbe585;
   color: #FFF;
+}
+
+.btn2{
+  margin-left: 15px;
 }
 
 .row{

@@ -2,7 +2,7 @@
   height: 25px;
 }
 
-.users-new-wrapper {
+.wrapper {
   width: 100vw;
   height: 100vh;
   background-image: url("bg-top.png");
@@ -13,14 +13,14 @@
   background-color: #464646;
 }
 
-.users-new-container {
-    padding-top: 125px;
+.container {
+    padding-top: 100px;
 }
- .form-group {
+ .form-g {
       margin-bottom: 20px;
  }
  
- .form-control{
+ .form-c{
      font-size: 15px;
      border:0;
      background: none;
@@ -36,12 +36,13 @@
      transition: 0.25s;
  }
  
- .form-control:focus{
+ .form-c:focus{
      width: 280px;
      border-color: #2ecc71;
  }
  
  .sub{
+     font-size: 16px;
      border:0;
      background: none;
      display: block;
@@ -59,3 +60,10 @@
      background-color: #2ecc71;
  }
  
+ .alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+

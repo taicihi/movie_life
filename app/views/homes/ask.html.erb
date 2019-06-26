@@ -1,0 +1,44 @@
+<html>
+    
+　 <head>
+　     <script src="jquery.min.js" type="text/javascript"></script>
+　     <link href='ask.css' rel='stylesheet'>
+　 </head>
+
+  <body>
+    
+    <header>
+        <nav>
+            <ul class="clearfix">
+              <li><%= link_to 'ホーム', homes_index_path %></li>
+              <li><%= link_to '作品一覧', homes_film_path %></li>
+              <li><%= link_to '映画館', homes_theater_path %></li>
+              <li><%= link_to 'ログアウト',logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } %></li>
+              <li>お問い合わせ</li>
+          </ul>
+        </nav>
+    </header>
+    
+    <main class="clearfix">
+        
+    </main>
+    <!-- main_end -->
+
+
+    <!-- footer_begin -->
+    <footer>
+      <ul>
+        <li><a href="movie.html">ホーム</a></li>
+        <li><a href ="#">作品情報</a></li>
+        <li><a href ="#">店舗紹介</a></li>
+        <li><a href ="#">ログイン</a></li>
+        <li><a href="#">動画投稿</a></li>
+        <li><a href ="#">お問い合わせ</a></li>
+      </ul>
+    
+    <small>&copy; 2018 CSS Cafe</small>
+    </footer>
+    
+    
+  </body>
+</html>
