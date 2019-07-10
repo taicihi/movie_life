@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  get 'topics/new'
   get 'sessions/new'
   root 'pages#index'
-  resources :users
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   get 'homes/theater'
   get 'homes/ask'
   
-  get 'inquiry' => 'inquiry#index'              # 入力画面
-  post 'inquiry/confirm' => 'inquiry#confirm'   # 確認画面
-  post 'inquiry/thanks' => 'inquiry#thanks'     # 送信完了画面
+  resources :users
+  resources :topics
   
 end

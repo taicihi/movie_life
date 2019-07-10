@@ -1,8 +1,14 @@
 <html>
     
 　 <head>
-　     <script src="jquery.min.js" type="text/javascript"></script>
 　     <link href='homes.css' rel='stylesheet'>
+　     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+　     <!--slick記述-->
+　     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+　     <script src="jquery.min.js" type="text/javascript"></script>
+　     <!--slick記述-->
+       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+　     <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
 　 </head>
 
   <body>
@@ -10,11 +16,27 @@
     <header>
         <nav>
             <ul class="clearfix">
-              <li>ホーム</li>
-              <li><%= link_to '作品一覧', homes_film_path %></li>
-              <li><%= link_to '映画館', homes_theater_path %></li>
-              <li><%= link_to 'ログアウト',logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } %></li>
-              <li><%= link_to 'お問い合わせ', inquiry_path %></li>
+            <li><i class="fas fa-home"></i>ホーム</li>
+            <li>
+              <%= link_to homes_film_path do %>
+                <i class="fa fa-sign-out"></i> 作品一覧
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_topic_path do %>
+                <i class="fas fa-film"></i> 映画館
+              <% end %>
+            </li>
+            <li>
+              <%= link_to logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } do %>
+                <i class="fas fa-sign-out-alt"></i>ログアウト
+              <% end %>
+            </li>
+            <li>
+              <%= link_to homes_ask_path do %>
+                <i class="fas fa-envelope-open-text"></i> お問い合わせ
+              <% end %>
+            </li>
           </ul>
         </nav>
     </header>
@@ -26,7 +48,7 @@
     
          <div id="main_content">
           <section id="info">
-            <h2>お知らせ</h2>
+            <h2><i class="fas fa-bell"></i>お知らせ</h2>
               <dl>
                 <dt>2019年6月10日</dt>
                 <dd>リニューアルオープンしました。</dd>
@@ -38,7 +60,7 @@
           </section>
     
           <section id="campaign">
-           <h2>キャンペーン情報</h2>
+           <h2><i class="fa fa-sign-out"></i>キャンペーン情報</h2>
             <ul>
               <li>日頃の感謝を込めて、全館がいつもよりお得に！</li>
               <li>平日11時から14時までお得な割引タイムを実施中。</li>
@@ -47,6 +69,7 @@
           </section>
         </div>
     
+      <div class="clearfix">
         <!-- side_bar -->
         <aside id="side_bar">
           <ul>
@@ -65,6 +88,21 @@
     
           </ul>
         </aside>
+      </div>
+       
+      <div class="clearfix">
+        <h2>あなたへのおすすめ</h2>
+        <div class="slider">
+          <div><%= image_tag 'sample1.jpg'%></div>
+          <div><%= image_tag 'sample2.jpg'%></div>
+          <div><%= image_tag 'sample3.jpg'%></div>
+          <div><%= image_tag 'sample4.jpg'%></div>
+          <div><%= image_tag 'sample5.jpg'%></div>
+          <div><%= image_tag 'sample6.jpg'%></div>
+        </div>
+      </div> 
+      
+      
     </main>
     <!-- main_end -->
 
@@ -72,17 +110,23 @@
     <!-- footer_begin -->
     <footer>
       <ul>
-        <li><a href="movie.html">ホーム</a></li>
-        <li><a href ="#">作品情報</a></li>
-        <li><a href ="#">店舗紹介</a></li>
-        <li><a href ="#">ログイン</a></li>
-        <li><a href="#">動画投稿</a></li>
-        <li><a href ="#">お問い合わせ</a></li>
+        <li>ホーム</li>
+        <li><%= link_to '作品一覧', homes_film_path %></li>
+        <li><%= link_to '映画館', new_topic_path %></li>
+        <li><%= link_to 'お問い合わせ', homes_ask_path %></li>
       </ul>
     
-    <small>&copy; 2018 CSS Cafe</small>
+    <small>&copy; 2019 Movie_Life</small>
     </footer>
-    
-    
+  
+  <script>
+   $('.slider').slick({
+     slidesToShow: 3,
+     arrows:true,//スライダーの左右に「進む」「戻る」ボタンをつけるか否か
+     prevArrow:'<button type="button" class="slick-prev">戻る</button>',//「戻る」ボタンのhtmlを指定
+     nextArrow:'<button type="button" class="slick-next">次へ</button>',//「進む」ボタンのhtmlを指定
+   });
+  </script>
+ 
   </body>
 </html>

@@ -6,26 +6,26 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
+/*html, body, div, span, object, iframe,*/
+/*h1, h2, h3, h4, h5, h6, p, blockquote, pre,*/
+/*abbr, address, cite, code,*/
+/*del, dfn, em, img, ins, kbd, q, samp,*/
+/*small, strong, sub, sup, var,*/
+/*b, i,*/
+/*dl, dt, dd, ol, ul, li,*/
+/*fieldset, form, label, legend,*/
+/*table, caption, tbody, tfoot, thead, tr, th, td,*/
+/*article, aside, canvas, details, figcaption, figure,*/
+/*footer, header, hgroup, menu, nav, section, summary,*/
+/*time, mark, audio, video {*/
+/*    margin:0;*/
+/*    padding:0;*/
+/*    border:0;*/
+/*    outline:0;*/
+/*    font-size:100%;*/
+/*    vertical-align:baseline;*/
+/*    background:transparent;*/
+/*}*/
 
 
 body{
@@ -33,14 +33,13 @@ body{
   background-size: cover;
   background-color: #DDDDDD;
 }
-
+/*header begin*/
 header nav ul{
   padding:0px;
   list-style: none;
   width: 940px;
   margin: 0 auto 0 auto;
 }
-
 header nav ul li {
   float: left;
   width: 186px;
@@ -54,21 +53,19 @@ header nav ul li {
 
   
 }
-
 header nav ul li a {
   color: white;
   display: block;
 }
-
 header nav ul li a:hover{
   background-color: green;
   text-decoration: none;
 }
+/*header end*/
 
 ul li ul li{
   display: none;
 }
-
 ul li:hover ul li{
   display: block;
 }
@@ -80,12 +77,13 @@ ul li:hover ul li{
 }
 
 
-/*main*/
+/*main begin*/
 main{
   width: 940px;
   margin: 0 auto;
+  padding-bottom: 200px;
+  
 }
-
 main h2 {
   font-size: 1.5em;
   margin-top: 0;
@@ -95,18 +93,192 @@ main h2 {
   border-bottom: 1px solid #614226
   
 }
-
 #main_image{
   margin-bottom: 30px;
   margin-top: 15px;
 }
-
 #main_content{
     float: left;
     width: 600px;
 }
+#main_content h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  text-align: left;
+  border-bottom: 1px solid #614226;
+  border-left: 10px solid #614226;
+}
+.fa-bell{
+  margin-right: 5px;
+}
+/*main end*/
 
+/*info begin*/
+#info dl {
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+#info dt {
+  float: left;
+  width: 8em;
+}
+#info dt,
+#info dd {
+  line-height: 1.5;
+}
+/*info end*/
+
+#campaign li {
+  line-height: 1.5;
+  margin-left: 20px;
+  list-style-type: none;
+}
+.fa-sign-out{
+  margin-right: 5px;
+}
+
+/*sidebar begin*/
 #side_bar{
     float: right;
     width: 300px;
 }
+#side_bar ul {
+  margin: 0;
+  padding: 0;
+}
+#side_bar ul li {
+  margin-bottom: 20px;
+  list-style-type: none; 
+}
+/*sidebar end*/
+
+
+/*footer begin*/
+footer {
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #614226;
+  clear: both;
+}
+footer ul {
+  margin-bottom: 20px;
+}
+footer ul li {
+  display: inline;
+  margin-left: 5px;
+}
+footer ul li a {
+  color: #FFF;
+}
+footer ul li a:link {
+  text-decoration: none;
+}
+footer ul li a:hover,
+footer ul li a:hover {
+  text-decoration: underline;
+}
+/*footer end*/
+
+/*お問い合わせのcss begin*/
+.contact{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 30px;
+}
+.contact h1{
+  font-size: 36px;
+}
+/*お問い合わせのcss end*/
+
+
+/*映画館 topic-newのcss*/
+.btn-1 {
+  width: 198px;
+  color: #565656;
+  border: 1px solid #565656;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+}
+.btn-1:hover {
+  color: #565656;
+  }
+.topic-new-wrapper {
+  padding-top: 0px;
+  background-color: #FFFFEE;
+  width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+.topic-name{
+  font-size: 25px;
+  margin-top: 5px;
+}
+/*topicのcss end*/
+
+
+/*映画館 topic-indexのcss begin*/
+.topic-index-wrapper {
+  padding-top: 0px;
+  background-color: #fafafa;
+  margin-bottom: 15px;
+}
+.topic-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+  }
+.topic-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+.topic-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+.topic-index-icon {
+  width: 35px;
+  height: 30px;
+  margin-left: 20px;
+  }
+/*topic-indexのcss end*/
+
+
+/*作品一覧 filmsのcss begin*/
+.films{
+  width: 940px;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+.example1{
+  width: 300px;
+  height: 200px;
+　margin-left: 30px;
+  }
+.slider{
+  width: 600px;
+  height: 300px;
+}
+.slick-track{
+  height: 250px;
+}
+.films_p{
+  margin-top: 20px;
+}
+.films_new{
+  margin-left: -15px;
+}
+/*filmsのcss end*/

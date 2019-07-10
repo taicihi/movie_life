@@ -1,0 +1,59 @@
+<html>
+    
+　 <head>
+　     <script src="jquery.min.js" type="text/javascript"></script>
+　     <link href='homes.css' rel='stylesheet'>
+　 </head>
+
+  <body>
+    
+    <header>
+        <nav>
+            <ul class="clearfix">
+              <li>ホーム</li>
+              <li><%= link_to '作品一覧', homes_film_path %></li>
+              <li><%= link_to '映画館', new_topic_path %></li>
+              <li><%= link_to 'ログアウト',logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } %></li>
+              <li><%= link_to 'お問い合わせ', homes_ask_path %></li>
+          </ul>
+        </nav>
+    </header>
+
+
+      <div class="topic-index-wrapper">
+          <div class="container">
+                <% @topics.each do |topic| %>
+                  <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                      <div class="topic-index-single">
+                        <h2 class="topic-author">
+                          <%= topic.user.name %>
+                        </h2>
+                        <%= image_tag topic.image.url %>
+                        <p class="topic-text">
+                          <%= topic.description %>
+                          <%= topic.description %>
+                          <%= topic.description %>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+          </div>
+      </div>
+            
+    <footer>
+      <ul>
+        <li>ホーム</li>
+        <li><%= link_to '作品一覧', homes_film_path %></li>
+        <li><%= link_to '映画館', new_topic_path %></li>
+        <li><%= link_to 'ログアウト',logout_path, method: :delete, data: { confirm: 'ログアウトしますか？' } %></li>
+        <li><%= link_to 'お問い合わせ', homes_ask_path %></li>
+      </ul>
+    
+    <small>&copy; 2018 CSS Cafe</small>
+    </footer>
+    
+    
+  </body>
+</html>
