@@ -36,10 +36,13 @@
               <input type="text" name="mail"></p>
               <p>お問合せ内容：<br>
               <textarea name="comment" cols="30" rows="5"></textarea></p>
-              <p><input type="submit" value="確認する"></p>
+              <p><input type="submit" value="送信する" onclick="submitbtn();"></p>
             </form>
             
-            <p>FacebookのMessengerでも受け付けております。こちらから<i class="fab fa-facebook-messenger fa-2x"></i></p>
+            <p>※FacebookのMessengerでも受け付けております。</p>
+            <div class="film-button">
+              <%= link_to 'こちらから', '#', { :class => "btn-square-slant" } %>
+            </div>
             
           </div>
         
@@ -59,6 +62,18 @@
     </div>
 
   
+  <script type="text/javascript">
+  　　function submitbtn() {
+        // 「OK」ボタン押下時
+        if (confirm('内容に間違いはないですか？')) {
+            alert('OK');
+        }
+        // 「キャンセル」ボタン押下時
+        else {
+            alert('キャンセル');
+       　 }
+  　　}
+　</script>
     
   </body>
 </html>

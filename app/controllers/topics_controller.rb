@@ -8,6 +8,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new
   end
   
+
   
 
   def create
@@ -20,9 +21,11 @@ class TopicsController < ApplicationController
       render :new
     end
   end
-
+  
+  
   private
-  def topic_params
-    params.require(:topic).permit(:user_id, :image, :description)
+    def topic_params
+      params.require(:topic).permit(:user_id, :image, :description)
+    end
   end
 end
